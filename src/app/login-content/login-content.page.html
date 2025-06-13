@@ -1,26 +1,22 @@
 <ion-content class="ion-padding custom-background">
-
   <!-- Tombol Back -->
   <ion-button fill="clear" size="large" class="back-button" routerLink="/login">
     <ion-icon slot="start" name="arrow-back-outline"></ion-icon>
   </ion-button>
 
-  <!-- Judul dan Subjudul -->
   <h1 class="title">Welcome Back Nderr👏</h1>
   <p class="subtitle">
-    Let’s Get Started!, Enter your phone number to create your GoCabs account
+    Masukkan nomor telepon Anda untuk masuk ke akun GoCabss Anda
   </p>
 
-  <!-- Input Nomor Telepon -->
   <h2 class="name-phone">Phone Number</h2>
   <ion-item class="phone-input">
     <ion-avatar slot="start">
-      <img src="assets/id.png" alt="id" />
+      <img src="assets/id.png" alt="id" class="id" />
     </ion-avatar>
-    <ion-input type="number" placeholder="Phone Number"></ion-input>
+    <ion-input type="number" placeholder="Phone Number" [(ngModel)]="phoneNumber"></ion-input>
   </ion-item>
 
-  <!-- Checkbox Terms -->
   <ion-item lines="none" class="checkbox-item">
     <ion-checkbox slot="start"></ion-checkbox>
     <ion-label class="checkbox-label">
@@ -28,14 +24,11 @@
     </ion-label>
   </ion-item>
 
-
-  <!-- Sudah punya akun -->
   <div class="sign-in-text">
-    Already have an account? <a routerLink="/login">Sign in</a>
+    Belum punya akun? <a routerLink="/login">Sign up</a>
   </div>
 
-  <ion-button expand="block" shape="round" class="social-button login" (click)="goToOtp()">
+  <ion-button expand="block" shape="round" class="login" (click)="goToOtp()">
     Login
   </ion-button>
-
 </ion-content>

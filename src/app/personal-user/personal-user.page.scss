@@ -1,0 +1,160 @@
+.custom-background {
+  --background: #fcd949;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.title {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 10px;
+}
+
+.profile-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+}
+
+.edit-icon-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: calc(50% - 50px); /* posisikan di kanan bawah avatar */
+  transform: translateX(50%);
+}
+
+.edit-icon-button {
+  --background: #00c853;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  min-height: 0;
+}
+
+.form-section {
+  width: 90%;
+}
+
+.form-label {
+  font-weight: 500;
+  margin-top: 12px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.input-item {
+  border-radius: 15px;
+  padding: 10px;
+  color: #000000;
+  --background: #ffffff !important; // Samakan background dengan halaman
+  background-color: #ffffff;
+}
+
+.id {
+  border: 1px solid black;
+}
+
+.phone-input {
+  --background: #ffffff;
+  border-radius: 10px;
+  align-items: center;
+  display: flex;
+}
+
+.flag-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px; /* jarak kecil antara bendera dan chevron */
+  margin-right: 8px;
+}
+
+.small-flag {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.small-flag img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.chevron-icon {
+  font-size: 16px;
+  color: #000;
+  margin-left: 4px;
+}
+
+.button-wrapper {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.continue-button {
+  --background: #197C34;
+  color: #fddf5c;
+  border-radius: 30px;
+  margin-top: 20px;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 48px;
+  text-transform: none;
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+:root {
+  --ion-text-color: #000;
+  --ion-color-step-850: #000; // Untuk ionic labels
+  --ion-item-color: #000;
+}
+
+ion-label, ion-input, ion-select, ion-item, h1, h2, h3, h4, h5, h6, p, span {
+  color: #000 !important;
+}
+
+ion-select::part(text),
+ion-input::part(native) {
+  color: #000 !important;
+}
+
+// Untuk icon
+ion-icon {
+  color: #000 !important;
+}
+
+// Tangkal dark mode bawaan device
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-text-color: #000;
+    --ion-item-color: #000;
+    --ion-color-step-850: #000;
+  }
+
+  ion-label, ion-input, ion-select, ion-item, ion-icon {
+    color: #000 !important;
+  }
+
+  ion-select::part(text),
+  ion-input::part(native) {
+    color: #000 !important;
+  }
+}

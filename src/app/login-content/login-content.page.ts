@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   standalone: false,
@@ -8,12 +9,60 @@ import { Router } from '@angular/router';
   styleUrls: ['./login-content.page.scss'],
 })
 export class LoginContentPage implements OnInit {
+  phoneNumber: string = '';
 
-  constructor(private router: Router) { }
+  constructor(
+    private router: Router,
+    private alertController: AlertController
+  ) {}
 
   ngOnInit() {
+    this.phoneNumber = ''; // Reset saat awal component dibuka pertama kali
   }
-  goToOtp() {
+
+  ionViewWillEnter() {
+    this.phoneNumber = ''; // Reset saat halaman kembali aktif
+  }
+
+  async goToOtp() {
+    const phoneStr = this.phoneNumber?.toString().trim();
+
+    // Cek jika kosong
+    if (!phoneStr) {
+      await this.showAlert(
+        'Nomor HP Dibutuhkan',
+        'Mohon masukkan nomor HP terlebih dahulu'
+      );
+      return;
+    }
+
+    // Cek jika panjang tidak sesuai (harus 11 atau 12 digit)
+    if (phoneStr.length < 11 || phoneStr.length > 12) {
+      await this.showAlert(
+        'Nomor HP Tidak Valid',
+        'Nomor HP harus terdiri dari 11 atau 12 digit angka.'
+      );
+      return;
+    }
+
+    // Jika valid, lanjut ke halaman OTP
     this.router.navigate(['/otp-input']);
-}
+  }
+
+  async showAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header,
+      message,
+      buttons: [
+        {
+          text: 'Oke',
+          role: 'cancel',
+          cssClass: 'elegant-alert-button',
+        },
+      ],
+      cssClass: 'elegant-alert',
+      backdropDismiss: false,
+    });
+    await alert.present();
+  }
 }

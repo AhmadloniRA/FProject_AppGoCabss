@@ -1,101 +1,107 @@
 .custom-background {
-    --background: #FFDE59;
-    background-color: #FFDE59;
-  }
-  
-  .back-button {
-    color: #000;
-    margin-top: 20px;
-    padding-left: 0;
-  }
-  
-  .title {
-    font-size: 30px;
-    font-weight: bold;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #000;
-    
-  }
-  
-  .subtitle {
-    font-weight: bold;
-    font-size: 16px;
-    margin-bottom: 20px;
-    line-height: 1.5;
-    color: #000;
-  }
-  
-  .custom-background {
-    --background: #FFDE59;
-    background-color: #FFDE59;
-  }
-  
-  .checkbox-item {
-    --background: #FFDE59 !important; // Samakan background dengan halaman
-    background-color: #fddf5c;
-  }
-  
-  ion-checkbox {
-    --background: #FFDE59;               // latar belakang saat tidak dicentang
-    --border-color: #000;                // garis pinggir checkbox (agar tetap terlihat)
-    --checkbox-background-checked: #ffffff; // latar belakang saat dicentang
-    --checkmark-color: #000000;          // warna centang
-    margin-right: 8px;
-    
-  }
+  --background: #FFDE59;
+  background-color: #FFDE59;
+}
 
-  .checkbox-label {
-    color: #000;
-  }
+.back-button {
+  color: #000;
+  margin-top: 30px;
+  padding-left: 0;
+}
 
-  .sign-in-text {
-    font-size: 16px;
-    margin-top: 15px;
-    text-align: center;
-    color: #000;
-  }
+.title {
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  color: #000;
 
-  .divider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 0;
-  }
-  
-  .name-phone {
-    font-size: 20px;
-    font-weight: bold;
-    color: #000;
-  }
+}
 
-  .phone-input {
-    border-radius: 15px;
-    padding: 15px;
-    color: #000000;
-    --background: #ede9e9 !important; // Samakan background dengan halaman
-    background-color: #ede9e9;
-  }
-  
-  .social-button {
-    border-radius: 30px;
-    margin-top: 420px;
-    color: #000;
-    --background: #ffffff;
-    --border-color: #000;
-    border: 4px solid black;
-    text-transform: none;
-    font-weight: 500;
-  }
+.subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #000;
+}
 
-  .login {
-    --background: #04221B;
-    color: #FFDE59;
-  }
+.custom-background {
+  --background: #FFDE59;
+  background-color: #FFDE59;
+}
 
-  .custom-icon {
-    width: 40px;
-    height: 40px;
-    margin-right: 5px;
-    border-radius: 50%;
-  }
+.checkbox-item {
+  font-size: 14px;
+  --background: #FFDE59 !important; // Samakan background dengan halaman
+  background-color: #FFDE59;
+}
+
+ion-checkbox::part(container) {
+  background: #FFDE59 !important; // latar belakang saat dicentang
+  border: 2px solid #000000 !important;
+}
+
+ion-checkbox::part(mark) {
+  color: #000000 !important; // warna centang
+}
+
+.checkbox-label {
+  color: #000;
+}
+
+.sign-in-text {
+  font-size: 14px;
+  margin-top: 15px;
+  text-align: center;
+  color: #000;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.name-phone {
+  margin-left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.phone-input {
+  border-radius: 15px;
+  padding: 18px;
+  color: #000000;
+  --background: #ffffff !important; // Samakan background dengan halaman
+  background-color: #ffffff;
+}
+
+.id{
+  border: 1px solid black;
+}
+
+.login {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  --background: #197C34;
+  color: #fddf5c;
+  border-radius: 30px;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 48px;
+  margin-top: 400px;
+  text-transform: none;
+}
+
+.custom-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  border-radius: 50%;
+}

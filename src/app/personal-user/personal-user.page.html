@@ -1,0 +1,72 @@
+<ion-content class="ion-padding custom-background" fullscreen scroll="true">
+  <div class="page-container">
+
+    <!-- Title -->
+    <h2 class="title">Isi data diri anda</h2>
+
+    <!-- Avatar + Edit Icon -->
+    <div class="profile-container">
+      <ion-avatar class="profile-avatar">
+        <img src="assets/Profile_basic.jpg" alt="profile"/>
+      </ion-avatar>
+      <div class="edit-icon-wrapper">
+        <ion-button fill="solid" size="small" class="edit-icon-button">
+          <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div class="form-section">
+
+      <!-- Full Name -->
+      <ion-label class="form-label">Full Name</ion-label>
+      <ion-item class="input-item">
+        <ion-input type="text" placeholder= "Full name"></ion-input>
+      </ion-item>
+
+      <!-- Email -->
+      <ion-label class="form-label">Email</ion-label>
+      <ion-item class="input-item">
+        <ion-icon slot="start" name="mail-unread-outline" class="email"></ion-icon>
+        <ion-input placeholder="Email" type="email" ></ion-input>
+      </ion-item>
+
+      <!-- Phone Number -->
+      <ion-label class="form-label">Phone Number</ion-label>
+      <ion-item class="input-item">
+        <ion-avatar slot="start" class="small-flag">
+          <img src="assets/id.png" alt="id" class="id"/>
+        </ion-avatar>
+        <ion-input placeholder="Enter phone number" type="number"></ion-input>
+      </ion-item>
+
+      <!-- Gender -->
+      <ion-label class="form-label">Gender</ion-label>
+      <ion-item class="input-item">
+        <ion-select interface="popover" placeholder="Pilih jenis kelamin">
+          <ion-select-option value="Male">Male</ion-select-option>
+          <ion-select-option value="Female">Female</ion-select-option>
+          <ion-select-option value="Other">Other</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <!-- User/Driver -->
+      <ion-label class="form-label">User / Driver</ion-label>
+      <ion-item class="input-item">
+        <ion-select interface="action-sheet" placeholder="Daftar sebagai?">
+          <ion-select-option value="user">🧍 User</ion-select-option>
+          <ion-select-option value="driver">🚗 Driver</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+
+    <!-- Continue Button -->
+    <div class="button-wrapper">
+      <ion-button expand="block" shape="round" class="continue-button">
+        Continue
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>

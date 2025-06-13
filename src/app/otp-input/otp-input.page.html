@@ -5,17 +5,21 @@
     <ion-icon slot="start" name="arrow-back"></ion-icon>
   </ion-button>
 
-  <h2 class="otp-title">Masukin OTP nye 😄</h2>
+  <h2 class="otp-title">Masukin OTP nye😄</h2>
   <p class="otp-subtitle">
     Check your messages! We've sent a one-time code to <b>+62 811304768</b>.
     Enter the code below to verify your account and continue.
   </p>
 
   <div class="otp-inputs">
-    <input type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*">
-    <input type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*">
-    <input type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*">
-    <input type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*">
+    <input #otpInput type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*"
+      (keypress)="validateNumber($event)" (input)="onInput($event, 0)" (keydown)="onKeyDown($event, 0)" />
+    <input #otpInput type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*"
+      (keypress)="validateNumber($event)" (input)="onInput($event, 1)" (keydown)="onKeyDown($event, 1)" />
+    <input #otpInput type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*"
+      (keypress)="validateNumber($event)" (input)="onInput($event, 2)" (keydown)="onKeyDown($event, 2)" />
+    <input #otpInput type="text" maxlength="1" class="otp-box" inputmode="numeric" pattern="[0-9]*"
+      (keypress)="validateNumber($event)" (input)="onInput($event, 3)" (keydown)="onKeyDown($event, 3)" />
   </div>
 
   <p class="resend-link">Resend code</p>
