@@ -1,20 +1,13 @@
-<ion-content class="ion-padding content-bg">
-  <h1 class="title">Pilih Metode Pembayaran</h1>
-  <div class="payment-option" [class.selected]="selected === 'tunai'" (click)="selectMethod('tunai')">
-    <img src="assets/tunai.png" alt="Tunai" />
-    <span>Tunai</span>
-  </div>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
 
-  <div class="payment-option-qris" [class.selected]="selected === 'qris'" (click)="selectMethod('qris')">
-    <img src="assets/qris.png" alt="Qris" />
-    <span>Qris</span>
-  </div>
-
-  <div class="payment-option-bank" [class.selected]="selected === 'bank'" (click)="selectMethod('bank')">
-    <img src="assets/bank.png" alt="Transfer Bank" />
-    <span>Transfer Bank</span>
-  </div>
-
-  <ion-button expand="block" fill="solid" shape="round" class="btn-ok" (click)="confirmMethod()">OK</ion-button>
-
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">chat</ion-title>
+    </ion-toolbar>
+  </ion-header>
 </ion-content>
