@@ -67,6 +67,14 @@ const routes: Routes = [
     path: 'cancel-ride',
     loadChildren: () => import('./cancel-ride/cancel-ride.module').then( m => m.CancelRidePageModule)
   },
+  {
+    path: 'payment',
+    loadChildren: () => import('./payment/payment.module').then( m => m.PaymentPageModule)
+  },
+  {
+    path: 'rating',
+    loadChildren: () => import('./rating/rating.module').then( m => m.RatingPageModule)
+  },
 ];
 
 @NgModule({
