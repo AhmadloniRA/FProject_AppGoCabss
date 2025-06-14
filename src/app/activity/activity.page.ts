@@ -8,8 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivityPage implements OnInit {
 
-  constructor() {}
+  selectedTab = 'riwayat';
 
-  ngOnInit() {
-  }
+  constructor() { }
+
+  ngOnInit() { }
+
 }
