@@ -2,53 +2,39 @@
   <h1>Aktivitas</h1>
 
   <div class="tab">
-    <div class="tab-item active">Riwayat</div>
-    <div class="tab-item">Dalam Proses</div>
+    <div class="tab-item" [class.active]="selectedTab==='riwayat'" (click)="selectedTab='riwayat'">
+      Riwayat
+    </div>
+    <div class="tab-item" [class.active]="selectedTab==='dalamProses'" (click)="selectedTab='dalamProses'">
+      Dalam Proses
+    </div>
   </div>
 
-  <ion-list lines="none">
-    <ion-item class="transaction-item">
+  <!-- Riwayat List -->
+  <ion-list lines="none" *ngIf="selectedTab==='riwayat'">
+    <ion-item *ngFor="let item of riwayatList" class="transaction-item">
       <ion-thumbnail slot="start">
         <img src="assets/Icon Motor hijau kuning 1.png" alt="transaction-img">
       </ion-thumbnail>
       <ion-label>
-        <h2>Universitas UBP</h2>
-        <p>Perjalanan Selesai</p>
+        <h2>{{item.universitas}}</h2>
+        <p>{{item.keterangan}}</p>
       </ion-label>
-      <span class="transaction-amount">Rp. 5.000</span>
+      <span class="transaction-amount">{{item.harga | currency:'IDR'}}</span>
     </ion-item>
+  </ion-list>
 
-    <ion-item class="transaction-item">
+  <!-- Dalam Proses List -->
+  <ion-list lines="none" *ngIf="selectedTab==='dalamProses'">
+    <ion-item *ngFor="let item of prosesList" class="transaction-item">
       <ion-thumbnail slot="start">
         <img src="assets/Icon Motor hijau kuning 1.png" alt="transaction-img">
       </ion-thumbnail>
       <ion-label>
-        <h2>Universitas UBP</h2>
-        <p>Perjalanan Selesai</p>
+        <h2>{{item.universitas}}</h2>
+        <p>{{item.keterangan}}</p>
       </ion-label>
-      <span class="transaction-amount">Rp. 5.000</span>
-    </ion-item>
-
-    <ion-item class="transaction-item">
-      <ion-thumbnail slot="start">
-        <img src="assets/Icon Motor hijau kuning 1.png" alt="transaction-img">
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Universitas UBP</h2>
-        <p>Perjalanan Selesai</p>
-      </ion-label>
-      <span class="transaction-amount">Rp. 5.000</span>
-    </ion-item>
-
-    <ion-item class="transaction-item">
-      <ion-thumbnail slot="start">
-        <img src="assets/Icon Motor hijau kuning 1.png" alt="transaction-img">
-      </ion-thumbnail>
-      <ion-label>
-        <h2>Universitas UBP</h2>
-        <p>Perjalanan Selesai</p>
-      </ion-label>
-      <span class="transaction-amount">Rp. 5.000</span>
+      <span class="transaction-amount">{{item.harga | currency:'IDR'}}</span>
     </ion-item>
   </ion-list>
 

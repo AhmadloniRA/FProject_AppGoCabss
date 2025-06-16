@@ -1,0 +1,37 @@
+<ion-content class="ion-padding custom-background">
+  <h2>Rincian Transaksi</h2>
+
+  <ion-list lines="none">
+    <ion-item color="light">
+      <ion-label>Tanggal</ion-label>
+      <ion-note>{{ transaction.date | date:'medium' }}</ion-note>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Jumlah</ion-label>
+      <ion-note>{{ transaction.harga | currency:'IDR' }}</ion-note>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Jarak Perjalanan</ion-label>
+      <ion-note>{{ transaction.jarak }} km</ion-note>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Durasi Perjalanan</ion-label>
+      <ion-note>{{ transaction.durasi }} menit</ion-note>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Pengemudi</ion-label>
+      <ion-note>{{ transaction.pengemudi }}</ion-note>
+    </ion-item>
+
+    <ion-item color="light">
+      <ion-label>Metode Pembayaran</ion-label>
+      <ion-note>{{ transaction.metodePembayaran }}</ion-note>
+    </ion-item>
+  </ion-list>
+
+  <ion-button fill="solid" color="dark" (click)="closeModal()">Tutup</ion-button>
+</ion-content>
