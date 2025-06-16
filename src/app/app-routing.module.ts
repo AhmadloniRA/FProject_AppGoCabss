@@ -75,6 +75,14 @@ const routes: Routes = [
     path: 'rating',
     loadChildren: () => import('./rating/rating.module').then( m => m.RatingPageModule)
   },
+  {
+    path: 'home-driver',
+    loadChildren: () => import('./home-driver/home-driver.module').then( m => m.HomeDriverPageModule)
+  },
+  {
+    path: 'tracking-driver',
+    loadChildren: () => import('./tracking-driver/tracking-driver.module').then( m => m.TrackingDriverPageModule)
+  },
 ];
 
 @NgModule({

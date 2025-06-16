@@ -27,6 +27,10 @@ const routes: Routes = [
           import('../chat/chat.module').then(m => m.ChatPageModule)
       },
       {
+        path: 'home-driver',
+        loadChildren: () => import('../home-driver/home-driver.module').then(m => m.HomeDriverPageModule)
+      },
+      {
         path: '',
         redirectTo: '/dasboard/home',
         pathMatch: 'full'
@@ -39,4 +43,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class DasboardPageRoutingModule {}
+export class DasboardPageRoutingModule { }
